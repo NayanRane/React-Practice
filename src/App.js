@@ -1,15 +1,21 @@
-import './App.css';
+import Header from "./Components/Header";
+import UserList from "./Components/UserList";
+import { useState } from "react";
 
-function App() {
+function App() {  
+  const [isLoggedIn,setLoogedIn] = useState(true);
+  const username = "nayan";
+  const users = ["Rajesh","Pranav","Ankit"];
+  const tooglebtn = () =>{
+  setLoogedIn(!isLoggedIn);
+ }
   return (
       <>
           <div className="d-flex justify-content-center align-items-center vh-100">
               <div className="card" style={{ width: '30rem', border: '2px solid red' }}>
                   <div className="card-body">
-                      <input type="text" className="form-control" id="user" placeholder="Enter your name" />
-                      <div className="row mt-5">
-                          <button className="btn btn-dark">Login</button>
-                      </div>
+                    <Header username = {username} isLoggedIn= {isLoggedIn} tooglebtn = {tooglebtn} />
+                    {isLoggedIn && <UserList users={users} />}
                   </div>
               </div>
           </div>
