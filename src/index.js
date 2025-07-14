@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
+// import Welcome from './Components/Welcome';
+import UserDashboard from './Components/UserDashboard';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <Welcome /> */}
+    {/* <Welcome name="Nayan" /> */}
+    <UserDashboard />
   </React.StrictMode>
 );
 
