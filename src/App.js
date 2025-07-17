@@ -2,6 +2,8 @@ import Header from "./Components/Header";
 import UserList from "./Components/UserList";
 import ToDoApp from "./Components/ToDoApp";
 import { useState } from "react";
+import CharCounter from "./Components/CharCounter";
+import TogglePassword from "./Components/TogglePassword";
 
 function App() {  
   const [isLoggedIn,setLoogedIn] = useState(true);
@@ -19,7 +21,9 @@ function App() {
                     {isLoggedIn && <UserList users={users} />}
                   </div>
               </div>
-              <ToDoApp/>
+              {/* <ToDoApp/> */}
+              <CharCounter/>
+              <TogglePassword/>
           </div>
       </>
   )
